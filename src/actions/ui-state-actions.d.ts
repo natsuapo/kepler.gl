@@ -27,7 +27,7 @@ export type ToggleSidePanelUpdaterAction = {
   payload: string;
 };
 export function toggleSidePanel(
-  id: string
+  id: string | null
 ): Merge<ToggleSidePanelUpdaterAction, {type: ActionTypes.TOGGLE_SIDE_PANEL}>;
 
 /** TOGGLE_MODAL */
