@@ -777,18 +777,22 @@ export const EXPORT_HTML_MAP_MODES = keyMirror({
 });
 
 // Export map options
-export const EXPORT_MAP_FORMAT_OPTIONS = Object.entries(EXPORT_MAP_FORMATS).map((entry: [string, any]) => ({
-  id: entry[0],
-  label: entry[1].toLowerCase(),
-  available: true
-}));
+export const EXPORT_MAP_FORMAT_OPTIONS = Object.entries(EXPORT_MAP_FORMATS).map(
+  (entry: [string, any]) => ({
+    id: entry[0],
+    label: entry[1].toLowerCase(),
+    available: true
+  })
+);
 
-export const EXPORT_HTML_MAP_MODE_OPTIONS = Object.entries(EXPORT_HTML_MAP_MODES).map((entry: [string, any]) => ({
-  id: entry[0],
-  label: `modal.exportMap.html.${entry[1].toLowerCase()}`,
-  available: true,
-  url: getHTMLMapModeTileUrl(entry[1])
-}));
+export const EXPORT_HTML_MAP_MODE_OPTIONS = Object.entries(EXPORT_HTML_MAP_MODES).map(
+  (entry: [string, any]) => ({
+    id: entry[0],
+    label: `modal.exportMap.html.${entry[1].toLowerCase()}`,
+    available: true,
+    url: getHTMLMapModeTileUrl(entry[1])
+  })
+);
 
 export const DEFAULT_UUID_COUNT = 6;
 
